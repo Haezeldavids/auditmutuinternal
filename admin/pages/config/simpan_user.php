@@ -1,6 +1,6 @@
 <?php
-require 'C:\xampp\htdocs\AMI-1\koneksi\koneksi.php'
-;
+require require '../koneksi/koneksi.php';
+
 
 if(isset($_POST['btn-simpan'])){
   $nip = $_POST['nip'];
