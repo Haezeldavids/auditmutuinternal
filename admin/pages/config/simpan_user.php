@@ -1,5 +1,5 @@
 <?php
-require '../koneksi/koneksi.php'
+require 'C:\xampp\htdocs\AMI-1\koneksi\koneksi.php'
 ;
 
 if(isset($_POST['btn-simpan'])){
