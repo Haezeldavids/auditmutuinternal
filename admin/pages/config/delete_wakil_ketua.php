@@ -1,6 +1,6 @@
 <?php  
 
-require '../../../koneksi/koneksi.php';
+require '../koneksi/koneksi.php';
 $id_wakil_ketua = $_GET['id_wakil_ketua'];
 
 $hapus		= mysqli_query($connect, "SELECT * FROM wakil_ketua WHERE id_wakil_ketua = '$id_wakil_ketua'");
