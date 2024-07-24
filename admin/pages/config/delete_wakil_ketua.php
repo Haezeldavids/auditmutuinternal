@@ -16,6 +16,6 @@ if ($delete) {
 
 // var_dump($hapus);
 
-header('Location:../../index.php?page=data_wakil_ketua');
+header('Location:../../index.php?page=akun_wakilketua');
 
 ?>
