@@ -94,7 +94,7 @@ require '../koneksi/koneksi.php';
               </tr>
             </thead>
             <tbody>
-              <?php require 'C:\xampp\htdocs\AMI-1\koneksi\koneksi.php';
+              <?php require '../koneksi/koneksi.php';
               $no_urut = 0;
               // $query = mysqli_query($connect, "SELECT * FROM login_wakil_ketua");
               // $query = mysqli_query($connect, "SELECT lwk.*,wkt.* FROM login_wakil_ketua lwk INNER JOIN wakil_ketua wkt ON wkt.id_wakil_ketua=lwk.id_wakil_ketua");
