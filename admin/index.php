@@ -1361,14 +1361,13 @@ $(document).ready(function()
   function validasidata_jadwal_audit(){
 
     var kode_sop = document.getElementById('kode_sop');
+    var kode_sn = document.getElementById('kode_sn');
     var id_auditor = document.getElementById('id_auditor');
     var program_studi = document.getElementById('program_studi');
     var tahun_pengukuran = document.getElementById('tahun_pengukuran');
     var tanggal_audit = document.getElementById('tanggal_audit');
 
-
-
-    if (jadwal_audit(kode_sop, "Standar Belum Diisi")){
+    if (jadwal_audit(kode_sn, "Standar Belum Diisi")){
       if (jadwal_audit(id_auditor, "Auditor Belum Diisi")){
        if (jadwal_audit(program_studi, "Program Studi Belum Diisi")){
         if (jadwal_audit(tahun_pengukuran, "Tahun Pengukuran Belum Diisi")){
