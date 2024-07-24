@@ -1,5 +1,5 @@
 <?php
-require '../../koneksi/koneksi.php';
+require '../koneksi/koneksi.php';
 // mencari kode barang dengan nilai paling besar
 // $query = "SELECT max(kode_kamera) as maxKode FROM kamera";
 // $hasil = mysqli_query($connect,$query);
