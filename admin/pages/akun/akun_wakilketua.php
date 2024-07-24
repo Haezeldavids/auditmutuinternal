@@ -1,5 +1,5 @@
 <?php
-require 'C:\xampp\htdocs\AMI-1\koneksi\koneksi.php';
+require '../koneksi/koneksi.php';
 // mencari kode barang dengan nilai paling besar
 // $query = "SELECT max(kode_kamera) as maxKode FROM kamera";
 // $hasil = mysqli_query($connect,$query);
@@ -27,32 +27,32 @@ require 'C:\xampp\htdocs\AMI-1\koneksi\koneksi.php';
 ?>
 
 <style>
-    #example1 {
-    border-collapse: collapse; 
-    border: 1px solid #003366; 
-}
+  #example1 {
+    border-collapse: collapse;
+    border: 1px solid #003366;
+  }
 
 
-#example1 th, #example1 td {
-    border: 1px solid #003366; 
-}
+  #example1 th,
+  #example1 td {
+    border: 1px solid #003366;
+  }
 
 
-#example1 thead th {
-    background-color: #003366; 
-    color: #fff; 
-}
+  #example1 thead th {
+    background-color: #003366;
+    color: #fff;
+  }
 
 
-#example1 tbody tr:hover {
-    background-color: #f0f0f0; 
-}
+  #example1 tbody tr:hover {
+    background-color: #f0f0f0;
+  }
 
 
-#example1 {
-    border: 2px solid #003366; 
-}
-
+  #example1 {
+    border: 2px solid #003366;
+  }
 </style>
 <!-- Main content -->
 <section class="content">
@@ -168,7 +168,7 @@ require 'C:\xampp\htdocs\AMI-1\koneksi\koneksi.php';
         <form method="POST" accept-charset="utf-8" enctype="multipart/form-data">
         <div class="modal-body">
             <div class="hasil-data">
-              <input type="hidden" name="id" value="<?= $rows['id']?>">
+              <input type="hidden" name="id" value="<?= $rows['id'] ?>">
               <input type="hidden" name="source" value="<?= $rows['source']; ?>">
               <div class="form-group">
                 <label for="">Nama</label>
@@ -177,12 +177,12 @@ require 'C:\xampp\htdocs\AMI-1\koneksi\koneksi.php';
 
               <div class="form-group">
                 <label for="">Username</label>
-                <input type="text" name="username" class="form-control" value="<?= $rows['username']?>">
+                <input type="text" name="username" class="form-control" value="<?= $rows['username'] ?>">
               </div>
 
               <div class="form-group">
                 <label for="">Password</label>
-                <input type="text" name="pw" class="form-control" value="<?= $rows['password']?>">
+                <input type="text" name="pw" class="form-control" value="<?= $rows['password'] ?>">
               </div>
 
               
@@ -194,35 +194,35 @@ require 'C:\xampp\htdocs\AMI-1\koneksi\koneksi.php';
           </div>  
         </form> 
         <?php
-        if(isset($_POST['up'])){
-$id=$_POST['id'];
-$username = $_POST['username'];
-$pw = $_POST['pw'];
-$source = $_POST['source'];
-$connect->begin_transaction();
-                           try {
-                               if ($source == 'login_wakil_ketua') {
-                                   $update = $connect->prepare("UPDATE login_wakil_ketua SET username=?, password=? WHERE id_wakil_ketua=?");
-                                   $update->bind_param("sss",$username, $pw, $id);
-                               } elseif ($source == 'login_staf') {
-                                   $update = $connect->prepare("UPDATE login_staf SET username=?, password=? WHERE id_staf=?");
-                                   $update->bind_param("sss",$username, $pw, $id);
-                               } elseif ($source == 'login_auditor') {
-                                   $update = $connect->prepare("UPDATE login_auditor SET username=?, password=? WHERE id_auditor=?");
-                                   $update->bind_param("ssi",$username, $pw, $id);
-                               }
-                               if ($update->execute()) {
-                                   $connect->commit();
-                                   echo "Update berhasil";
-                               } else {
-                                   throw new Exception("Error updating record: " . $update->error);
-                               }
-                           } catch (Exception $e) {
-                               $connect->rollback();
-                               echo "Update gagal: " . $e->getMessage();
-                           }
-                           echo "<script>alert('Berhasil');document.location='index.php?page=akun_wakilketua';</script>";
-                          }
+                if (isset($_POST['up'])) {
+                  $id = $_POST['id'];
+                  $username = $_POST['username'];
+                  $pw = $_POST['pw'];
+                  $source = $_POST['source'];
+                  $connect->begin_transaction();
+                  try {
+                    if ($source == 'login_wakil_ketua') {
+                      $update = $connect->prepare("UPDATE login_wakil_ketua SET username=?, password=? WHERE id_wakil_ketua=?");
+                      $update->bind_param("sss", $username, $pw, $id);
+                    } elseif ($source == 'login_staf') {
+                      $update = $connect->prepare("UPDATE login_staf SET username=?, password=? WHERE id_staf=?");
+                      $update->bind_param("sss", $username, $pw, $id);
+                    } elseif ($source == 'login_auditor') {
+                      $update = $connect->prepare("UPDATE login_auditor SET username=?, password=? WHERE id_auditor=?");
+                      $update->bind_param("ssi", $username, $pw, $id);
+                    }
+                    if ($update->execute()) {
+                      $connect->commit();
+                      echo "Update berhasil";
+                    } else {
+                      throw new Exception("Error updating record: " . $update->error);
+                    }
+                  } catch (Exception $e) {
+                    $connect->rollback();
+                    echo "Update gagal: " . $e->getMessage();
+                  }
+                  echo "<script>alert('Berhasil');document.location='index.php?page=akun_wakilketua';</script>";
+                }
         ?>
         </div>
       
@@ -282,7 +282,7 @@ $connect->begin_transaction();
         // Mengambil data wakil ketua dari database
         $query_wakil_ketua = mysqli_query($connect, "SELECT * FROM wakil_ketua ORDER BY nip_wakil_ketua ASC");
         while ($row = mysqli_fetch_array($query_wakil_ketua)) {
-            echo "<option value='wakil_ketua_$row[id_wakil_ketua]' data-kode-user=\"{$row['nip_wakil_ketua']}\">$row[nama_wakil_ketua]</option>";
+          echo "<option value='wakil_ketua_$row[id_wakil_ketua]' data-kode-user=\"{$row['nip_wakil_ketua']}\">$row[nama_wakil_ketua]</option>";
         }
         ?>
     </optgroup>
@@ -291,7 +291,7 @@ $connect->begin_transaction();
         // Mengambil data staf dari database
         $query_staf = mysqli_query($connect, "SELECT * FROM staf ORDER BY nik_staf ASC");
         while ($row = mysqli_fetch_array($query_staf)) {
-            echo "<option value='staf_$row[id]' data-kode-user=\"{$row['nik_staf']}\">$row[nama_staf]</option>";
+          echo "<option value='staf_$row[id]' data-kode-user=\"{$row['nik_staf']}\">$row[nama_staf]</option>";
         }
         ?>
     </optgroup> 
@@ -300,7 +300,7 @@ $connect->begin_transaction();
         // Mengambil data auditor dari database
         $query_auditor = mysqli_query($connect, "SELECT * FROM auditor ORDER BY nip ASC");
         while ($row = mysqli_fetch_array($query_auditor)) {
-            echo "<option value='auditor_$row[id_auditor]' data-kode-user=\"{$row['nip']}\">$row[nama_auditor]</option>";
+          echo "<option value='auditor_$row[id_auditor]' data-kode-user=\"{$row['nip']}\">$row[nama_auditor]</option>";
         }
         ?>
     </optgroup>
@@ -308,12 +308,12 @@ $connect->begin_transaction();
 
                             <!-- <option disabled>--Wakil Ketua--</option> -->
                             <!-- <?php
-                            //Mengambil nama jabatan dalam Database
-                            $wakil_ketua = mysqli_query($connect, "SELECT * from wakil_ketua order by nama_wakil_ketua ASC");
-                            while ($rows = mysqli_fetch_array($wakil_ketua)) {
-                              echo "<option value=\"$rows[id_wakil_ketua]\">$rows[nama_wakil_ketua]</option>\n";
-                            }
-                            ?> -->
+                                  //Mengambil nama jabatan dalam Database
+                                  $wakil_ketua = mysqli_query($connect, "SELECT * from wakil_ketua order by nama_wakil_ketua ASC");
+                                  while ($rows = mysqli_fetch_array($wakil_ketua)) {
+                                    echo "<option value=\"$rows[id_wakil_ketua]\">$rows[nama_wakil_ketua]</option>\n";
+                                  }
+                                  ?> -->
                           </select>
                        </div>
                       
@@ -325,66 +325,56 @@ $connect->begin_transaction();
                             <input type="text" class="form-control" name="username" id="username" placeholder="Masukan Username">
                           </div>
                           <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var kodeSnSelect = document.getElementById('id_user');
-            var kodeSopInput = document.getElementById('username');
+        document.addEventListener(' DOMContentLoaded', function() { var kodeSnSelect=document.getElementById('id_user'); var kodeSopInput=document.getElementById('username'); kodeSnSelect.addEventListener('change', function() { var selectedOption=kodeSnSelect.options[kodeSnSelect.selectedIndex]; var kodeSN=selectedOption.getAttribute('data-kode-user'); kodeSopInput.value=kodeSN; }); }); </script>
 
-            kodeSnSelect.addEventListener('change', function() {
-                var selectedOption = kodeSnSelect.options[kodeSnSelect.selectedIndex];
-                var kodeSN = selectedOption.getAttribute('data-kode-user');
-                kodeSopInput.value = kodeSN;
-            });
-        });
-    </script>
+                              <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="text" class="form-control" name="password" id="password" placeholder="Masukan Password">
+                              </div>
 
-                          <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="text" class="form-control" name="password" id="password" placeholder="Masukan Password">
-                          </div>  
-                            
 
-                      
-                                              
-                          
-                
-            </div>  
-         </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Close</button>
-                      <button type="submit" class="btn btn-success" name="btn-simpan">Save changes</button>
-                    </div>                  
-                </form>
-              </div>
-            </div>
-            <!-- /.modal-content -->
-          </div>
-          <!-- /.modal-dialog -->
+
+
+
+
+                      </div>
         </div>
-
-
-
-         
-
-
-
-
-
-
-
-<div class="modal fade" id="konfirmasi_hapus_wakil_ketua" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-  
-        <div class="modal-dialog" style="margin-top: 15%;">
-            <div class="modal-content" style="margin-top: 100px;">
-              <div class="modal-header">
-                  <h4 class="modal-title" style="text-align: center;">Anda yakin akan menghapus data ini ?</h4>
-              </div>
-                <div class="modal-footer" style="margin:0px; border-top:0px; text-align:center;">
-                    <a class="btn btn-danger btn-ok"> Hapus</a> 
-                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-close"></i> Batal</button>
-                </div>
-            </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-success" name="btn-simpan">Save changes</button>
         </div>
+        </form>
+      </div>
     </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+  </div>
 
-    
-    </section>
+
+
+
+
+
+
+
+
+
+
+  <div class="modal fade" id="konfirmasi_hapus_wakil_ketua" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+
+    <div class="modal-dialog" style="margin-top: 15%;">
+      <div class="modal-content" style="margin-top: 100px;">
+        <div class="modal-header">
+          <h4 class="modal-title" style="text-align: center;">Anda yakin akan menghapus data ini ?</h4>
+        </div>
+        <div class="modal-footer" style="margin:0px; border-top:0px; text-align:center;">
+          <a class="btn btn-danger btn-ok"> Hapus</a>
+          <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-close"></i> Batal</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</section>
