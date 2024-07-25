@@ -255,7 +255,7 @@ require '../koneksi/koneksi.php';
                 <div class="col-md-9">
                   <div class="form-group">
                     <label for="nip">NIP</label>
-                    <input type="text" class="form-control" name="nip" id="nip" placeholder="Masukan NIP user">
+                    <input type="text" required class="form-control" name="nip" id="nip" placeholder="Masukan NIP user">
                   </div>
                   <div class="form-group">
                     <label for="nama">Nama</label>

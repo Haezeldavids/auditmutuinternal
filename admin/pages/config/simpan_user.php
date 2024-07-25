@@ -1,5 +1,5 @@
 <?php
-require '../koneksi/koneksi.php'
+require '../../../koneksi/koneksi.php'
 ;
 
 if(isset($_POST['btn-simpan'])){
