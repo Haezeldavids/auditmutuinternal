@@ -9,11 +9,11 @@ if(isset($_POST['btn-simpan'])){
   $no_telp = $_POST['no_telp'];
   $jabatan = $_POST['jabatan'];
 
-  echo "NIP: $nip<br>";
-  echo "Nama: $nama<br>";
-  echo "Email: $email<br>";
-  echo "No Telp: $no_telp<br>";
-  echo "Jabatan: $jabatan<br>";
+  // echo "NIP: $nip<br>";
+  // echo "Nama: $nama<br>";
+  // echo "Email: $email<br>";
+  // echo "No Telp: $no_telp<br>";
+  // echo "Jabatan: $jabatan<br>";
 
   if($jabatan == 'Wakil Ketua'){
     $query = "INSERT INTO wakil_ketua (nip_wakil_ketua, nama_wakil_ketua, email_wakil_ketua, no_telp_wakil_ketua, jabatan_wakil_ketua) VALUES ('$nip', '$nama', '$email', '$no_telp', '$jabatan')";
