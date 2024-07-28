@@ -109,12 +109,12 @@
         <form method="post" name="login" action="../koneksi/cek_login.php">
             <div class="login-form">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Username" name="username">
+                    <input type="text" required class="form-control" placeholder="Username" name="username">
                     <i class="fa fa-user"></i>
                 </div>
 
                 <div class="form-group log-status">
-                    <input type="password" class="form-control" placeholder="Password" name="password">
+                    <input type="password" required class="form-control" placeholder="Password" name="password">
                     <i class="fa fa-lock"></i>
                     <a class="link" href="register.php">Registrasi</a>
                 </div>
