@@ -1,27 +1,6 @@
 <?php
 require '../koneksi/koneksi.php';
-// mencari kode barang dengan nilai paling besar
-// $query = "SELECT max(kode_kamera) as maxKode FROM kamera";
-// $hasil = mysqli_query($connect,$query);
-// $data = mysqli_fetch_array($hasil);
-// $kodeKamera = $data['maxKode'];
-// 
-// mengambil angka atau bilangan dalam kode anggota terbesar,
-// dengan cara mengambil substring mulai dari karakter ke-1 diambil 6 karakter
-// misal 'BRG001', akan diambil '001'
-// setelah substring bilangan diambil lantas dicasting menjadi integer
-// $noUrut = (int) substr($kodeKamera, 3, 3);
 
-// bilangan yang diambil ini ditambah 1 untuk menentukan nomor urut berikutnya
-// $noUrut++;
-
-// membentuk kode anggota baru
-// perintah sprintf("%03s", $noUrut); digunakan untuk memformat string sebanyak 3 karakter
-// misal sprintf("%03s", 12); maka akan dihasilkan '012'
-// atau misal sprintf("%03s", 1); maka akan dihasilkan string '001'
-// $char = "KMR";
-// $kodeBarang = $char . sprintf("%03s", $noUrut);
-// echo $kodeBarang;
 
 
 ?>
@@ -277,7 +256,7 @@ $connect->begin_transaction();
                           <label for="id_user">User</label>
 <select name="id_user" id="id_user" class="form-control">
   <option value="">--Pilih User--</option>
-    <optgroup label="Wakil Ketua">
+    <optgroup label="LPM">
         <?php
         // Mengambil data wakil ketua dari database
         $query_wakil_ketua = mysqli_query($connect, "SELECT * FROM wakil_ketua ORDER BY nip_wakil_ketua ASC");
@@ -286,7 +265,7 @@ $connect->begin_transaction();
         }
         ?>
     </optgroup>
-    <optgroup label="Staf">
+    <optgroup label="Koorprodi">
         <?php
         // Mengambil data staf dari database
         $query_staf = mysqli_query($connect, "SELECT * FROM staf ORDER BY nik_staf ASC");
