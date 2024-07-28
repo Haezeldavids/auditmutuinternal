@@ -181,17 +181,7 @@ $kd_unit = $char . sprintf("%03s", $noUrut);
                 </div>
               <?php } ?>
             </tbody>
-            <!-- <tfoot>
-                <tr>
-                  <th>No</th>
-                  <th>Kode Unit Kerja</th>
-                  <th>Nama Unit Kerja</th>
-                  <th>Pengampu Unit Kerja</th>
-                  <th>Penanggung Jawab</th>
-                
-                
-                </tr>
-                </tfoot> -->
+           
           </table>
         </div>
       </div>
@@ -221,7 +211,7 @@ $kd_unit = $char . sprintf("%03s", $noUrut);
                 </div>
                 <div class="form-group">
                   <label for="nama_unit">Nama Program Studi</label>
-                  <input type="text" class="form-control" name="nama_unit" id="nama_unit" placeholder="Masukan Nama Program Studi">
+                  <input type="text" required class="form-control" name="nama_unit" id="nama_unit" placeholder="Masukan Nama Program Studi">
                 </div>
                 <div class="form-group">
                   <label for="nama_jbt">Koorprodi</label>

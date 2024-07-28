@@ -191,43 +191,12 @@ header ("location:login_wakil_ketua.php");
           <li><a href="index2.php?page=unit_kerja"><i class="fa fa-circle-o"></i>Program Studi</a></li>
           <li><a href="index2.php?page=data_wakil_ketua"><i class="fa fa-circle-o"></i>Daftar User</a></li>
           <li><a href="index2.php?page=jadwal"><i class="fa fa-circle-o"></i>Jadwal Audit</a></li>
-            <!-- <li><a href="index2.php?page=jabatan"><i class="fa fa-circle-o"></i> Jabatan</a></li>
-            <li><a href="index2.php?page=penanggung_jawab"><i class="fa fa-circle-o"></i> Auditor</a></li>
-            <li><a href="index2.php?page=staf"><i class="fa fa-circle-o"></i>Koorprodi</a></li>
-            <li><a href="index2.php?page=olah_akun_staf"><i class="fa fa-circle-o"></i>Akun Koorprodi</a></li> -->
-            <!-- <li><a href="index2.php?page=job_desk"><i class="glyphicon glyphicon-list"></i>Deskripsi Pekerjaan</a></li> -->
+            
           </ul>
         </li>
 
 
-        <!-- <li class="treeview">
-          <a href="#">
-            <i class="glyphicon glyphicon-pushpin"></i>
-            <span>Master Data Staf</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="index2.php?page=staf"><i class="glyphicon glyphicon-user"></i> Staf</a></li>
-            <li><a href="index2.php?page=olah_akun_staf"><i class="glyphicon glyphicon-user"></i>Akun Staf</a></li>
-          </ul>
-          
-        </li> -->
-
-        <!-- <li class="treeview">
-          <a href="#">
-            <i class="fa fa-briefcase"></i>
-            <span>Unit Kerja</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            
        
-          </ul>
-        </li>     -->
 
         <li class="treeview">
           <a href="#">
