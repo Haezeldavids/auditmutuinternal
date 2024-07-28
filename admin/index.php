@@ -324,54 +324,11 @@ header ("location:login.php");
       case 'kontrol_audit':
           include "pages/kontrol_audit/kontrol_audit.php";
           break;
-      // case 'gedung':
-      //   include "pages/ruangan/gedung.php";
-      //   break;
-      // case 'lokasi':
-      //   include "pages/ruangan/lokasi.php";
-      //   break;
-      // case 'kamera':
-      //   include "pages/informasi/data_kamera.php";
-      //   break;
-      //   case 'pnpkamera':
-      //   include "pages/informasi/penempatan_kamera.php";
-      //   break;
-      // case 'ipkamera':
-      //   include "pages/informasi/ip_kamera.php";
-      //   break;
-      // case 'minipc':
-      //   include "pages/informasi/minipc.php";
-      //   break;
-      //   case 'infominipc':
-      //   include "pages/informasi/info_minipc.php";
-      //   break;
-      // case 'arsip':
-      //   include "pages/informasi/arsip.php";
-      //   break;
-        // case 'laporan_ipkamera':
-        // include "pages/informasi/laporan_kamera.php";
-        // break;
-        // case 'log_kamera':
-        // include "pages/informasi/log.php";
-        // break;
+      
         case 'admin':
         include "pages/informasi/admin.php";
         break;
-        // case 'laporan_log_kamera':
-        // include "pages/informasi/laporan_log_kamera.php";
-        // break;
-        // case 'laporan_log':
-        // include "pages/informasi/laporan_log.php";
-        // break;
-      // case 'peserta':
-      //   include "pages/peserta/peserta.php";
-      //   break;
-      // case 'berita':
-      //   include "pages/runningtext/berita.php";
-      //   break;
-      // case 'training':
-      //   include "pages/training/training.php";
-      //   break;              
+        
       default:
         echo "<center><h3>Maaf. Halaman tidak di temukan !</h3></center>";
         break;
