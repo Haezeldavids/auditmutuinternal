@@ -284,7 +284,7 @@ $kd_jdw= $char . sprintf("%03s", $noUrut);
                           
                           <div class="form-group">
                             <label for="tahun_pengukuran">Periode</label>
-                            <input type="text" class="form-control" name="tahun_pengukuran" id="tahun_pengukuran" placeholder="Masukan Tahun Pengukuran Mutu">
+                            <input type="text" required class="form-control" name="tahun_pengukuran" id="tahun_pengukuran" placeholder="Masukan Tahun Pengukuran Mutu">
                           </div>
 
                       <div class="form-group">
@@ -303,7 +303,7 @@ $kd_jdw= $char . sprintf("%03s", $noUrut);
                           <div class="row">
                             <div class="col-md-8">
                               <div class="input-group date">
-                                <input class="form-control" type="text" name="tanggal_selesai" id="tanggal_selesai" readonly="readonly" placeholder="Tanggal Selesai">
+                                <input class="form-control" type="text" required name="tanggal_selesai" id="tanggal_selesai" readonly="readonly" placeholder="Tanggal Selesai">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
                               </div>
                             </div>
