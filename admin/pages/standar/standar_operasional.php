@@ -220,7 +220,7 @@ $is_admin = mysqli_num_rows($query_admin) > 0;
                          <div class="form-group">
                           
                               <label for="nama_sop">Nama Standar Operasional</label>
-                              <input type="text" class="form-control" name="nama_sop" id="nama_sop" placeholder="Masukan Nama Standar Operasional">   
+                              <input type="text" required class="form-control" name="nama_sop" id="nama_sop" placeholder="Masukan Nama Standar Operasional">   
                           </div>
                                          
                          <div class="form-group"> 
@@ -253,7 +253,7 @@ $is_admin = mysqli_num_rows($query_admin) > 0;
 
                        <div class="form-group">
                         <label for="file">Dokumen</label>
-                        <input type="file" name="file" id="file" class="form-control btn btn-success" accept=".xls,.xlsx">
+                        <input type="file" name="file"  id="file" class="form-control btn btn-success" accept=".xls,.xlsx">
                       </div>
 
                             <div class="form-group">
