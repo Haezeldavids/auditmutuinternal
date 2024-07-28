@@ -169,29 +169,12 @@ header ("location:login_staf.php");
         <!-- <li class="active treeview"> -->
         <li class="">
           <a href="index3.php">
-            <i class="fa fa-home"></i> <span>Dashboard</span>
+            <i class="fa fa-home"></i> <span>Beranda</span>
             <span class="pull-right-container">
               <!-- <i class="fa fa-angle-left pull-right"></i> -->
             </span>
           </a>
         </li>
-
-    
-
-         <!-- <li class="treeview">
-          <a href="#">
-            <i class="glyphicon glyphicon-file"></i>
-            <span>Butir Sub Standar</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="index3.php?page=butir_sop"><i class="glyphicon glyphicon-file"></i>Butir Standar</a></li>
-            <li><a href="index3.php?page=standar_operasional"><i class="glyphicon glyphicon-tags"></i>Standar</a></li>
-          </ul>
-        </li> -->
-
 
          <li class="treeview">
           <a href="#">

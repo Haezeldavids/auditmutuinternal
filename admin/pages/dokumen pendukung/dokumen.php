@@ -202,7 +202,7 @@
                          <div class="form-group">
                           
                               <label for="nama_dokumen">Nama Dokumen</label>
-                              <input type="text" class="form-control" name="nama_dokumen" id="nama_dokumen" placeholder="Masukan nama dokumen">   
+                              <input type="text" required class="form-control" name="nama_dokumen" id="nama_dokumen" placeholder="Masukan nama dokumen">   
                           </div>
 
                          
