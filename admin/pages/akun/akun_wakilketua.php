@@ -262,7 +262,7 @@ $connect->begin_transaction();
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Tambah Data User</h4>
+                <h4 class="modal-title">Tambah Akun User</h4>
               </div>
           <div class="modal-body">
             <form action="pages/config/simpan_akun_wakil_ketua.php" onsubmit="" method="POST" enctype="multipart/form-data">
@@ -322,7 +322,7 @@ $connect->begin_transaction();
                           
                           <div class="form-group">
                             <label for="username">Username</label>
-                            <input type="text" class="form-control" name="username" id="username" placeholder="Masukan Username">
+                            <input type="text" required class="form-control" name="username" id="username" placeholder="Masukan Username">
                           </div>
                           <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -339,7 +339,7 @@ $connect->begin_transaction();
 
                           <div class="form-group">
                             <label for="password">Password</label>
-                            <input type="text" class="form-control" name="password" id="password" placeholder="Masukan Password">
+                            <input type="text" required class="form-control" name="password" id="password" placeholder="Masukan Password">
                           </div>  
                             
 
