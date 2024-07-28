@@ -255,19 +255,19 @@ require '../koneksi/koneksi.php';
                 <div class="col-md-9">
                   <div class="form-group">
                     <label for="nip">NIP</label>
-                    <input type="text" required class="form-control" name="nip" id="nip" placeholder="Masukan NIP user">
+                    <input type="text" required class="form-control" name="nip" id="nip" placeholder="Masukan NIP User">
                   </div>
                   <div class="form-group">
                     <label for="nama">Nama</label>
-                    <input type="text" class="form-control" name="nama" id="nama" placeholder="Masukan nama user">
+                    <input type="text" required class="form-control" name="nama" id="nama" placeholder="Masukan Nama User">
                   </div>
                   <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="text" class="form-control" name="email" id="email" placeholder="Masukan Email">
+                    <input type="text" required class="form-control" name="email" id="email" placeholder="Masukan Email">
                   </div>
                   <div class="form-group">
                     <label for="no_telp">Nomor Handphone</label>
-                    <input type="text" class="form-control" name="no_telp" id="no_telp" placeholder="Masukan No hp">
+                    <input type="text" required class="form-control" name="no_telp" id="no_telp" placeholder="Masukan No hp">
                   </div>
                   <div class="form-group">
                     <label for="jabatan">Role</label>
