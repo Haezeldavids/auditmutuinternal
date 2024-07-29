@@ -174,7 +174,7 @@
                               //Mengambil nama jabatan dalam Database
                               $unit_kerja = mysqli_query($connect,"SELECT * from jadwal order by program_studi ASC");
                               while ($rows = mysqli_fetch_array($unit_kerja)) {
-                                echo "<option value=\"$rows[kode_jadwal]\">$rows[program_studi]</option>\n";
+                                echo "<option value=\"$rows[kode_jadwal]\">$rows[program_studi] ($rows[tahun_pengukuran])</option>\n";
                               }
                             ?>
                           </select>
