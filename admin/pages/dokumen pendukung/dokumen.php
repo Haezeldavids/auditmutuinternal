@@ -116,11 +116,7 @@
                           <?php echo $rows['nama_dokumen'];?> </td>
                       <td> <?php echo $rows['dokumen']?></td>
                       <td> <?php echo $rows['tgl_dokumen'];?></td>
-               
-                      
-                    
-                    
-                      
+   
                       <td><center>
                              <div class="btn-group">
                   <button type="button" class="btn btn-danger">Action</button>
