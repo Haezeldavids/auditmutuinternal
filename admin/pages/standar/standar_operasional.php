@@ -177,7 +177,7 @@ $is_admin = mysqli_num_rows($query_admin) > 0;
                               //Mengambil nama jabatan dalam Database
                               $unit_kerja = mysqli_query($connect,"SELECT * from jadwal order by program_studi ASC");
                               while ($rows = mysqli_fetch_array($unit_kerja)) {
-                                echo "<option value=\"$rows[kode_jadwal]\">$rows[program_studi] ($rows[tahun_pengukuran])</option>\n";
+                                echo "<option value=\"$rows[kode_jadwal]\" data-kode-sop=\"{$rows['kode_sop']}\">$rows[program_studi] ($rows[tahun_pengukuran])</option>\n";
                               }
                             ?>
                           </select>
@@ -253,7 +253,7 @@ $is_admin = mysqli_num_rows($query_admin) > 0;
 
                        <div class="form-group">
                         <label for="file">Dokumen</label>
-                        <input type="file" name="file"  id="file" class="form-control btn btn-success" accept=".xls,.xlsx">
+                        <input type="file" name="file" required id="file" class="form-control btn btn-success" accept=".xls,.xlsx">
                       </div>
 
                             <div class="form-group">
